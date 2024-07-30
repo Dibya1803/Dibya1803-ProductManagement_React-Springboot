@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+/home/bandaru/Dibya/Eidiko Documents/SpringBoot and React Full stack projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3903417381.index
+2426377271.index
+814829947.index
+3962593573.index

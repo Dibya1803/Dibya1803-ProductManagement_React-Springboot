@@ -1,0 +1,16 @@
+/* Navbar.css */
+.navbar {
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1rem;
+}
