@@ -12,7 +12,7 @@ const EditProduct = () => {
   });
 
   const navigate = useNavigate();
-  const { id } = useParams(); // Correctly get id from URL params
+  const { id } = useParams();
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -34,20 +34,15 @@ const EditProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(product);
 
-    if (product.id) {
-      ProductService.editProduct(product.id, product) // Pass id and product correctly
-        .then((res) => {
-          setMessage("Product updated successfully");
-          navigate("/");
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } else {
-      console.error("Product ID is not defined");
-    }
+    ProductService.editProduct(product)
+      .then((res) => {
+        setMessage("Product updated successfully");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -71,7 +66,6 @@ const EditProduct = () => {
                     value={product.productName}
                   />
                 </div>
-
                 <div className="mb-3">
                   <label className="form-label">
                     Enter Product Description
@@ -84,7 +78,6 @@ const EditProduct = () => {
                     value={product.description}
                   />
                 </div>
-
                 <div className="mb-3">
                   <label className="form-label">Enter Product Price</label>
                   <input
@@ -95,7 +88,6 @@ const EditProduct = () => {
                     value={product.price}
                   />
                 </div>
-
                 <div className="mb-3">
                   <label className="form-label">Enter Product Status</label>
                   <input
@@ -106,7 +98,6 @@ const EditProduct = () => {
                     value={product.status}
                   />
                 </div>
-
                 <button className="btn btn-primary w-100">
                   Update Product
                 </button>

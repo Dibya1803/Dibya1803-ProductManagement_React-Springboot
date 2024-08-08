@@ -18,11 +18,9 @@ const AddProduct = () => {
 
   const ProductRegister = (e) => {
     e.preventDefault();
-    console.log(product);
 
     ProductService.saveProduct(product)
       .then((res) => {
-        console.log("Product Added Successfully");
         setMessage("Product Added Successfully");
         setProduct({
           productName: "",
@@ -53,11 +51,10 @@ const AddProduct = () => {
                     type="text"
                     name="productName"
                     className="form-control"
-                    onChange={(e) => handleChange(e)}
+                    onChange={handleChange}
                     value={product.productName}
                   />
                 </div>
-
                 <div className="mb-3">
                   <label className="form-label">
                     Enter Product Description
@@ -66,33 +63,30 @@ const AddProduct = () => {
                     type="text"
                     name="description"
                     className="form-control"
-                    onChange={(e) => handleChange(e)}
+                    onChange={handleChange}
                     value={product.description}
                   />
                 </div>
-
                 <div className="mb-3">
                   <label className="form-label">Enter Product Price</label>
                   <input
                     type="text"
                     name="price"
                     className="form-control"
-                    onChange={(e) => handleChange(e)}
+                    onChange={handleChange}
                     value={product.price}
                   />
                 </div>
-
                 <div className="mb-3">
                   <label className="form-label">Enter Product Status</label>
                   <input
                     type="text"
                     name="status"
                     className="form-control"
-                    onChange={(e) => handleChange(e)}
+                    onChange={handleChange}
                     value={product.status}
                   />
                 </div>
-
                 <button className="btn btn-primary w-100">Add Product</button>
               </form>
             </div>

@@ -3,24 +3,29 @@ import axios from "axios";
 const API_URL = "http://localhost:8080";
 
 class ProductService {
-  saveProduct(product) {
-    return axios.post(API_URL + "/saveProduct", product);
-  }
-
   getAllProduct() {
-    return axios.get(API_URL + "/");
+    return axios.get(`${API_URL}/`);
   }
 
   getProductById(id) {
-    return axios.get(API_URL + "/" + id);
+    return axios.get(`${API_URL}/${id}`);
   }
 
   deleteProduct(id) {
-    return axios.get(API_URL + "/deleteProduct/" + id);
+    return axios.delete(`${API_URL}/deleteProduct/${id}`);
   }
 
-  editProduct(product) { 
-    return axios.put(API_URL + "/editProduct/" + product.id, product);
+  editProduct(product) {
+    return axios.post(`${API_URL}/editProduct`, product, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
+
+  saveProduct(product) {
+    return axios.post(`${API_URL}/addProduct`, product, {
+    });
   }
 }
 

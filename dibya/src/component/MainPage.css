@@ -1,0 +1,22 @@
+.main-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-section {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  
+  .hero-text {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333;
+  }
+  
