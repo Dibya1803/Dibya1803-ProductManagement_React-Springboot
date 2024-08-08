@@ -24,7 +24,7 @@ class ProductService {
   }
 
   saveProduct(product) {
-    return axios.post(`${API_URL}/addProduct`, product, {
+    return axios.post(`${API_URL}/saveProduct`, product, {
     });
   }
 }
