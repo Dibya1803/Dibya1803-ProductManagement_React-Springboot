@@ -5,11 +5,9 @@ const MainPage = () => {
   return (
     <div className="main-page">
       <div className="hero-section">
-        <h1 className="hero-text text-center text-success">
-          Product Management System
-        </h1>
+        <h1 className="hero-text text-center">Product Management System</h1>
         <img
-          src="./src/component/images/pms2.jpg"
+          src="/src/component/Images/pms.jpg" /* Ensure this path is correct */
           alt="Product Management System"
           className="hero-image"
         />
